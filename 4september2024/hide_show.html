@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
+
+
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium enim aspernatur veniam vel animi illo adipisci neque quod placeat assumenda, saepe non sint officiis. Voluptatum ipsam aperiam doloremque qui quae sit, necessitatibus veritatis minus delectus aspernatur voluptatibus illum aliquam architecto explicabo possimus vitae sunt aliquid suscipit ut eius facilis? Nostrum aut id reprehenderit ea cupiditate. At suscipit nostrum, reiciendis est fugit officiis maiores totam delectus adipisci repellendus harum architecto deleniti accusamus. Voluptas dolore dicta a praesentium nam eius voluptatibus magni molestiae eaque dolores fugit iste nobis, recusandae.</p>
+
+    <button class="btn1">Hide</button>
+    <button class="btn2">Show</button>
+    <button class="btn3">Toggle</button>
+
+    <h1>This is a heading.</h1>
+    <script>
+        $(document).ready(function () {
+
+            $(".btn1").click(function(){
+                $("p").hide();
+            })
+
+            $(".btn2").click(function(){
+                $("p").show();
+            })
+
+            $(".btn3").click(function(){
+                $("p").toggle();
+            })
+           
+        });
+
+    </script>
+    
+</body>
+</html>
