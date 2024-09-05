@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ipsa eum doloremque corporis quod dolore autem. Sint quia ad dicta accusantium? Cupiditate animi labore sed quia quis. Deserunt nostrum, repellat fugit velit aut debitis officiis? Labore laudantium inventore laborum rerum doloremque recusandae excepturi ipsam modi quisquam ut optio culpa eaque provident, architecto debitis dignissimos accusantium porro repellat sint aperiam, consectetur facilis? Voluptas, corporis sed! Debitis, in minima voluptas optio non nostrum iste quisquam ad sequi culpa facere maxime quis perferendis earum asperiores iusto cum fuga quos ducimus voluptate quas neque cupiditate! Quidem odit totam placeat fuga voluptate rem labore quae!</div>
+
+    <div>Div without class</div>
+
+    <button id="rmv1">Remove</button>
+    <button id="emt2">Empty</button>
+
+    <script>
+        $(function(){
+            $("#rmv1").click(function(){
+                $("div").remove(".p1");
+            })
+
+            $("#emt2").click(function(){
+                $("div").empty();
+            })
+        });
+    </script>
+    
+</body>
+</html>
