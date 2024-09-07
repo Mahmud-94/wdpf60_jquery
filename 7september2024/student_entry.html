@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    
+    <form action="" id="myfm">
+        <input type="text" name="name" class="nm" placeholder="Enter your name" id=""><br>
+        Gender: 
+        <input type="radio" class="g" name="gender" value="m">Male 
+        <input type="radio" class="g" name="gender" value="f">Female  <br>
+        Date of Birth:
+        <input type="date" class="db" name="dob" id=""><br>
+        <input type="text" class="em" name="email" placeholder="enter email" id=""><br>
+        <input type="text" class="ph" name="phone" placeholder="enter phone" id=""><br>
+        <textarea name="address" class="ads" placeholder="Enter your adderss" id=""></textarea><br>
+        <input type="button" name="submit" value="submit" id="btn">
+    </form>
+    <div id="show"></div>
+    
+    
+
+
+    <script>
+        $(document).ready(function () {
+            get_students();
+
+            $("#btn").click(function(){
+                let formdata = $("#myfm").serialize();
+                console.log(formdata);
+                $.post("insert.php", {mydata:formdata}, function(data, status){
+                    alert(data);
+                })    
+                get_students();
+
+            })
+            function get_students(){
+            $.post('students.php', function(data, status){
+                $("#show").html(data);
+                })
+            }
+            
+        });
+    </script>
+</body>
+</html>
