@@ -11,8 +11,8 @@
     <form action="" id="myfm">
         <input type="text" name="name" class="nm" placeholder="Enter your name" id=""><br>
         Gender: 
-        <input type="radio" class="g" name="gender" value="m">Male 
-        <input type="radio" class="g" name="gender" value="f">Female  <br>
+        <input type="radio" class="g" name="gender" value="male">Male 
+        <input type="radio" class="g" name="gender" value="female">Female  <br>
         Date of Birth:
         <input type="date" class="db" name="dob" id=""><br>
         <input type="text" class="em" name="email" placeholder="enter email" id=""><br>
@@ -27,7 +27,8 @@
 
     <script>
         $(document).ready(function () {
-            get_students();
+            // get_students();
+            $("#show").load("students.php");
 
             $("#btn").click(function(){
                 let formdata = $("#myfm").serialize();
@@ -35,14 +36,17 @@
                 $.post("insert.php", {mydata:formdata}, function(data, status){
                     alert(data);
                 })    
-                get_students();
+                // get_students();
+                $("#show").load("students.php");
 
             })
-            function get_students(){
-            $.post('students.php', function(data, status){
-                $("#show").html(data);
-                })
-            }
+            // function get_students(){
+            // $.post('students.php', function(data, status){
+            //     // $("#show").html(data);              
+            //     })
+            // }
+
+           
             
         });
     </script>
